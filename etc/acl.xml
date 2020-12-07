@@ -1,0 +1,21 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Acl/etc/acl.xsd">
+	<acl>
+		<resources>
+			<resource id="Magento_Backend::admin">
+				<resource id="Nvn_Company::department" sortOrder="10" title="department">
+					<resource id="Nvn_Company::department_save" sortOrder="10" title="Save department"/>
+					<resource id="Nvn_Company::department_delete" sortOrder="20" title="Delete department"/>
+					<resource id="Nvn_Company::department_update" sortOrder="30" title="Update department"/>
+					<resource id="Nvn_Company::department_view" sortOrder="40" title="View department"/>
+				</resource>
+				<resource id="Nvn_Company::employee" sortOrder="10" title="employee">
+					<resource id="Nvn_Company::employee_save" sortOrder="10" title="Save employee"/>
+					<resource id="Nvn_Company::employee_delete" sortOrder="20" title="Delete employee"/>
+					<resource id="Nvn_Company::employee_update" sortOrder="30" title="Update employee"/>
+					<resource id="Nvn_Company::employee_view" sortOrder="40" title="View employee"/>
+				</resource>
+			</resource>
+		</resources>
+	</acl>
+</config>

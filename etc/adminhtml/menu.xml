@@ -1,0 +1,7 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+	<menu>
+		<add action="nvn_company/department/index" id="Nvn_Company::nvn_company_department" module="Nvn_Company" parent="Magento_Backend::content" resource="Magento_Backend::content" sortOrder="9999" title="department"/>
+		<add action="nvn_company/employee/index" id="Nvn_Company::nvn_employee_entity" module="Nvn_Company" parent="Magento_Backend::content" resource="Magento_Backend::content" sortOrder="9999" title="employee"/>
+	</menu>
+</config>
