@@ -3,12 +3,22 @@
 	<preference for="Nvn\Company\Api\DepartmentRepositoryInterface" type="Nvn\Company\Model\DepartmentRepository"/>
 	<preference for="Nvn\Company\Api\Data\DepartmentInterface" type="Nvn\Company\Model\Data\Department"/>
 	<preference for="Nvn\Company\Api\Data\DepartmentSearchResultsInterface" type="Magento\Framework\Api\SearchResults"/>
+    <preference for="Nvn\Company\Api\EmployeeRepositoryInterface" type="Nvn\Company\Model\EmployeeRepository"/>
+    <preference for="Nvn\Company\Api\Data\EmployeeInterface" type="Nvn\Company\Model\Data\Employee"/>
+    <preference for="Nvn\Company\Api\Data\EmployeeSearchResultsInterface" type="Magento\Framework\Api\SearchResults"/>
+
 	<virtualType name="Nvn\Company\Model\ResourceModel\Department\Grid\Collection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
 		<arguments>
 			<argument name="mainTable" xsi:type="string">nvn_company_department</argument>
 			<argument name="resourceModel" xsi:type="string">Nvn\Company\Model\ResourceModel\Department\Collection</argument>
 		</arguments>
 	</virtualType>
+    <virtualType name="Nvn\Company\Model\ResourceModel\Employee\Grid\Collection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">nvn_employee_entity</argument>
+            <argument name="resourceModel" xsi:type="string">Nvn\Company\Model\ResourceModel\Employee\Collection</argument>
+        </arguments>
+    </virtualType>
 	<type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
 		<arguments>
 			<argument name="collections" xsi:type="array">
@@ -17,13 +27,4 @@
 			</argument>
 		</arguments>
 	</type>
-	<preference for="Nvn\Company\Api\EmployeeRepositoryInterface" type="Nvn\Company\Model\EmployeeRepository"/>
-	<preference for="Nvn\Company\Api\Data\EmployeeInterface" type="Nvn\Company\Model\Data\Employee"/>
-	<preference for="Nvn\Company\Api\Data\EmployeeSearchResultsInterface" type="Magento\Framework\Api\SearchResults"/>
-	<virtualType name="Nvn\Company\Model\ResourceModel\Employee\Grid\Collection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
-		<arguments>
-			<argument name="mainTable" xsi:type="string">nvn_employee_entity</argument>
-			<argument name="resourceModel" xsi:type="string">Nvn\Company\Model\ResourceModel\Employee\Collection</argument>
-		</arguments>
-	</virtualType>
 </config>
