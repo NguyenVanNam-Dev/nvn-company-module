@@ -7,6 +7,14 @@
     <preference for="Nvn\Company\Api\Data\EmployeeInterface" type="Nvn\Company\Model\Data\Employee"/>
     <preference for="Nvn\Company\Api\Data\EmployeeSearchResultsInterface" type="Magento\Framework\Api\SearchResults"/>
 
+    <type name="Magento\Catalog\Block\Product\AbstractProduct">
+        <plugin name="foggyPlugin1" type="Foggyline\Plugged\Block\Catalog\Product\ AbstractProductPlugin1" disabled="false" sortOrder="100"/>
+        <plugin name="foggyPlugin2" type="Foggyline\Plugged\Block\Catalog\Product\ AbstractProductPlugin2"
+                disabled="false" sortOrder="200"/>
+        <plugin name="foggyPlugin3"
+                type="Foggyline\Plugged\Block\Catalog\Product\ AbstractProductPlugin3"
+                disabled="false" sortOrder="300"/>
+    </type>
 	<virtualType name="Nvn\Company\Model\ResourceModel\Department\Grid\Collection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
 		<arguments>
 			<argument name="mainTable" xsi:type="string">nvn_company_department</argument>
@@ -23,7 +31,7 @@
 		<arguments>
 			<argument name="collections" xsi:type="array">
 				<item name="nvn_company_department_listing_data_source" xsi:type="string">Nvn\Company\Model\ResourceModel\Department\Grid\Collection</item>
-				<item name="nvn_employee_entity_listing_data_source" xsi:type="string">Nvn\Company\Model\ResourceModel\Employee\Grid\Collection</item>
+				<item name="nvn_employee_entity_listing_data_source" xsi:type="string">Nvn\Company\Model\ResourceModel\Department\Grid\Collection</item>
 			</argument>
 		</arguments>
 	</type>
